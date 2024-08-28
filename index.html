@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTERNSHIP PROJECT</title>
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="image/pic1.jpg" alt="Logo">
+        </div>
+        <div class="title">
+            <h2> <span>MEAL</span> MATRIX SYSTEM</h2>
+        </div>
+    </header>
+
+    <main>
+        <nav>
+            <ul>
+                <div class="tab">
+                    <button class="tablinks active" onclick="openCity(event, 'Home')" id="defaultOpen">Home</button>
+                    <button class="tablinks" onclick="openCity(event, 'registerworker')">Register Worker</button>
+                    <button class="tablinks" onclick="openCity(event, 'registerConsumption')">Register Consumption</button>
+                    <button class="tablinks" onclick="openCity(event, 'displayDebts')">Display Worker's Debt</button>
+                </div>
+            </ul>
+        </nav>
+
+        <section class="content-area">
+            <div id="Home" class="tabcontent active">
+                <div class="home-content">
+                    <h1>WELCOME TO PRESPRINT CANTEEN</h1>
+                    <p>Our canteen offers a wide variety of delicious and affordable meals to keep you energized throughout your workday. We also have a variety of snacks and drinks to choose from. </p>
+                    
+                    <div class="image-container">
+                        <img src="image/image1.jpg" alt="Image 1" class="active">
+                        <img src="image/image2.jpg" alt="Image 2">
+                        <img src="image/image3.jpg" alt="Image 3">
+                    </div>
+                    <p>We are committed to providing our customers with a clean and comfortable environment.</p>
+                </div>
+            </div>
+
+            <div id="registerworker" class="tabcontent">
+                <form id="register-worker-form">
+                    <h2>Register Worker</h2>
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" required>
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" required>
+                    <label for="workerId">Worker's ID:</label>
+                    <input type="number" id="workerId" required>
+                    <label for="dateOfBirth">Date of Birth:</label>
+                    <input type="date" id="dateOfBirth" required>
+                    <label for="placeOfBirth">Place of Birth:</label>
+                    <input type="text" id="placeOfBirth" required>
+                    <label for="gender">Gender:</label>
+                    <select id="gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                    <label for="department">Department:</label>
+                    <select id="department" required>
+                        <option value="markerting">Marketing</option>
+                        <option value="pdl">PDL</option>
+                        <option value="printing">Printing</option>
+                    </select>
+                    <label for="status">Status:</label>
+                    <select id="status" required>
+                        <option value="permanent">Permanent</option>
+                        <option value="temporal">Temporal</option>
+                        <option value="internet">Intern</option>
+                    </select>
+                    <button id="register-worker-btn">Register Worker</button>
+                </form>
+            </div>
+
+            <div id="registerConsumption" class="tabcontent">
+                <form id="register-consumption-form">
+                    <h2>Register Consumption</h2>
+                    <label for="workerId">Worker's Name:</label>
+                    <input type="text" id="workerId" required>
+                    <label for="consumptionDate">Date of Consumption:</label>
+                    <input type="date" id="consumptionDate" required>
+                    <label for="consumptionType">Type of Consumption:</label>
+                    <select id="consumptionType" required>
+                        <option value="food">Food</option>
+                        <option value="drinks">Drinks</option>
+                    </select>
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" required>
+                    <button id="register-consumption-btn">Register Consumption</button>
+                </form>
+            </div>
+
+            <div id="displayDebts" class="tabcontent">
+                <h2>Worker's Debt</h2>
+                <table id="debtTable">
+                    <thead>
+                        <tr>
+                            <th>Worker ID</th>
+                            <th>Name</th>
+                            <th>Debt Amount</th>
+                            <th>Date Incurred</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>TRY US AND YOU WILL COME BACK</p>
+    </footer>
+
+    <script src="scriptsd.js"></script>
+</body>
+</html>
